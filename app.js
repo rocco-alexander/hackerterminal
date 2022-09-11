@@ -35,6 +35,9 @@ document.querySelector('.input').addEventListener('keydown', function onEvent(ev
         lineCount--
     }
 })
+document.querySelector('.type-space').addEventListener('click', function onEvent(event){   
+    document.querySelector(".input").focus()
+})
 
 const printLetter = (event)=>{
     letter = (event.target.value)
