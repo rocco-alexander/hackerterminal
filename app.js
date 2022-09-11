@@ -6,7 +6,7 @@ document.querySelector('.input').addEventListener('keydown', function onEvent(ev
     let typespace = document.querySelector(".type-space")
     let currentLine = document.querySelector(".typer")
     let input = document.querySelector(".input")
-    console.log(input.value.length)
+
     // When the enters a carriage return
     if(event.keyCode === 13){
         prevContent.push(currentLine.textContent)
@@ -29,6 +29,10 @@ document.querySelector('.input').addEventListener('keydown', function onEvent(ev
         lines.pop().className='typer'
         input.value = prevContent.pop() + " "
         lineCount--
+    }
+    if(event.keyCode === 9){
+        console.log("yeah")
+        input.value += "    "
     }
 })
 document.querySelector('.type-space').addEventListener('click', function onEvent(event){   
